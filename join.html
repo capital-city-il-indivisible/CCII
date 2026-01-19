@@ -77,42 +77,78 @@
             not published anywhere or shared with others outside of Capital City
             Illinois Indivisible.
           </p>
-          <p class="red-text">* Indicates required question</p>
+          <p class="orange-text"><strong>* Indicates required question</strong></p>
         </div>
 
-        <form name="join" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="join">
-          <input type="hidden" name="redirect" value="/thanksjoin.html">
+        <form
+          name="join"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="join" />
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="redirect" value="/thanksjoin.html" />
+
           <div class="join-section">
             <label for="first-name">First Name *️</label><br />
             <input
               type="text"
               name="first-name"
+              id="firstName"
               placeholder="First Name"
+              pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{1,50}$"
+              title="Letters, spaces, hyphens, apostrophes only"
               required
             />
+            <div class="error" id="firstNameError">
+              Please enter a valid first name.
+            </div>
           </div>
           <div class="join-section">
             <label for="last-name">Last Name *</label><br />
             <input
               type="text"
               name="last-name"
+              id="lastName"
               placeholder="Last Name"
+              pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{1,50}$"
+              title="Letters, spaces, hyphens, apostrophes only"
               required
             />
+            <div class="error" id="lastNameError">
+              Please enter a valid last name.
+            </div>
           </div>
           <div class="join-section">
             <label for="email">Email*</label><br />
             <input
               type="email"
               name="email"
+              id="email"
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+              title="Enter a valid email address"
               placeholder="Your Email"
               required
             />
+            <div class="error" id="emailError">
+              Please enter a valid email address.
+            </div>
           </div>
           <div class="join-section">
             <label for="phone">Phone *</label><br />
-            <input type="tel" name="phone" placeholder="Your Phone" required />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Your Phone"
+              required
+              pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"
+              title="Valid US phone number"
+            />
+            <div class="error" id="phoneError">
+              Please enter a valid US phone number.
+            </div>
             <p>Okay to text this number?</p>
 
             <div class="check-container">
@@ -126,8 +162,14 @@
             </div>
 
             <p><strong>Are you on the Signal phone app?</strong></p>
-            <p>(We are strongly encouraging all CCII members to download and utilize this free encrypted texting service for communication regarding CCII events)</p>
-            <a href="https://signal.org/download/">Download Signal for phone or PC</a><br><br>
+            <p>
+              (We are strongly encouraging all CCII members to download and
+              utilize this free encrypted texting service for communication
+              regarding CCII events)
+            </p>
+            <a href="https://signal.org/download/"
+              >Download Signal for phone or PC</a
+            ><br /><br />
             <div class="check-container">
               <input type="radio" id="signal" name="signal" value="yes" />
               <label class="check-box" for="signal-yes">Yes</label>
@@ -139,175 +181,415 @@
             </div>
 
             <div class="check-container">
-              <input type="radio" id="signal-not-yet" name="signal" value="not yet" />
-              <label class="check-box" for="signal-not-yet">Not yet. Working on it.</label>
+              <input
+                type="radio"
+                id="signal-not-yet"
+                name="signal"
+                value="not yet"
+              />
+              <label class="check-box" for="signal-not-yet"
+                >Not yet. Working on it.</label
+              >
             </div>
 
             <div class="check-container">
-              <input type="radio" id="signal-help" name="signal" value="needs help setting up signal" />
-              <label class="check-box" for="signal-no">I need help setting it up</label>
+              <input
+                type="radio"
+                id="signal-help"
+                name="signal"
+                value="needs help setting up signal"
+              />
+              <label class="check-box" for="signal-no"
+                >I need help setting it up</label
+              >
             </div>
-
           </div>
           <!-- End of Phone section -->
 
           <div class="join-section">
             <label for="contact">Preferred method of contact</label><br />
             <div class="check-container">
-              <input type="radio" id="email-pref" name="contact" value="email" />
+              <input
+                type="radio"
+                id="email-pref"
+                name="contact"
+                value="email"
+              />
               <label class="check-box" for="contact">Email</label>
             </div>
             <div class="check-container">
-              <input type="radio" id="phone-pref" name="contact" value="phone" />
+              <input
+                type="radio"
+                id="phone-pref"
+                name="contact"
+                value="phone"
+              />
               <label class="check-box" for="contact">Phone</label>
             </div>
             <div class="check-container">
-              <input type="radio" id="no-pref" name="contact" value="no preference" />
+              <input
+                type="radio"
+                id="no-pref"
+                name="contact"
+                value="no preference"
+              />
               <label class="check-box" for="contact">No preference</label>
             </div>
           </div>
 
           <div class="join-section">
             <label for="contact">Zip code</label><br />
-            <input type="text" id="zip" name="zip" placeholder="Your zip code"/>
+            <input
+              type="text"
+              id="zip"
+              name="zip"
+              placeholder="Your zip code"
+              pattern="^\d{5}(-\d{4})?$"
+              title="5-digit or 5+4 ZIP code"
+            />
+            <div class="error" id="zipError">
+              Please enter a valid ZIP code.
+            </div>
           </div>
 
-           <div class="join-section">
+          <div class="join-section">
             <label for="district">Congressional district</label><br />
             <div class="check-container">
-              <input type="radio" id="district13" name="district" value="IL-13"/>
+              <input
+                type="radio"
+                id="district13"
+                name="district"
+                value="IL-13"
+              />
               <label class="check-box" for="district">IL-13</label>
             </div>
             <div class="check-container">
-              <input type="radio" id="district15" name="district" value="IL-15"/>
+              <input
+                type="radio"
+                id="district15"
+                name="district"
+                value="IL-15"
+              />
               <label class="check-box" for="district">IL-15</label>
             </div>
             <div class="check-container">
-              <input type="radio" id="district-unsure" name="district" value="Unsure"/>
+              <input
+                type="radio"
+                id="district-unsure"
+                name="district"
+                value="Unsure"
+              />
               <label class="check-box" for="district">Not sure</label>
             </div>
           </div>
-          
+
           <div class="join-section">
-            <label for="motivation">What motivates you to get involved with Indivisible? *</label><br />
-            <input type="text" id="motive" name="motive" placeholder="Your answer" required/>
+            <label for="motivation"
+              >What motivates you to get involved with Indivisible? *</label
+            ><br />
+            <textarea
+              type="text"
+              id="motivation"
+              name="motivation"
+              placeholder="Your answer"
+              pattern="^.{1,1000}$"
+              title="Max 1000 characters"
+              required
+            ></textarea>
+            <div class="error" id="motivationError">
+              Please write your motivation (1–1000 characters).
+            </div>
           </div>
 
           <div class="join-section">
-            <label for="skills">Do you have special interests or skills you can share? *<br>Choose as many as you like.</label><br />
+            <label for="skills"
+              >Do you have special interests or skills you can share? *<br />Choose
+              as many as you like.</label
+            ><br />
             <div class="check-container">
-              <input type="checkbox" id="participate" name="skills" value="Participation and showing up" required/>
-              <label class="check-box" for="skills">Participation and showing up</label>
+              <input
+                type="checkbox"
+                id="participate"
+                name="skills"
+                value="Participation and showing up"
+              />
+              <label class="check-box" for="skills"
+                >Participation and showing up</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="leading" name="skills" value="Organizing/Leading actions or initiatives"/>
-              <label class="check-box" for="skills">Organizing/Leading actions or initiatives</label>
+              <input
+                type="checkbox"
+                id="leading"
+                name="skills"
+                value="Organizing/Leading actions or initiatives"
+              />
+              <label class="check-box" for="skills"
+                >Organizing/Leading actions or initiatives</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="organizing" name="skills" value="Organizing rallies/Large group events"/>
-              <label class="check-box" for="skills">Organizing rallies/Large group events</label>
+              <input
+                type="checkbox"
+                id="organizing"
+                name="skills"
+                value="Organizing rallies/Large group events"
+              />
+              <label class="check-box" for="skills"
+                >Organizing rallies/Large group events</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="graphics" name="skills" value="Graphics and web design"/>
-              <label class="check-box" for="skills">Graphics and web design</label>
+              <input
+                type="checkbox"
+                id="graphics"
+                name="skills"
+                value="Graphics and web design"
+              />
+              <label class="check-box" for="skills"
+                >Graphics and web design</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="social-media" name="skills" value="Social media team"/>
+              <input
+                type="checkbox"
+                id="social-media"
+                name="skills"
+                value="Social media team"
+              />
               <label class="check-box" for="skills">Social media team</label>
             </div>
             <div class="check-container">
-              <input type="checkbox" id="databases" name="skills" value="Developing and maintaining spreadsheets/databases"/>
-              <label class="check-box" for="skills">Developing and maintaining spreadsheets/databases</label>
+              <input
+                type="checkbox"
+                id="databases"
+                name="skills"
+                value="Developing and maintaining spreadsheets/databases"
+              />
+              <label class="check-box" for="skills"
+                >Developing and maintaining spreadsheets/databases</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="writing" name="skills" value="Writing and editing"/>
+              <input
+                type="checkbox"
+                id="writing"
+                name="skills"
+                value="Writing and editing"
+              />
               <label class="check-box" for="skills">Writing and editing</label>
             </div>
             <div class="check-container">
-              <input type="checkbox" id="fundraising" name="skills" value="Fundraising or accounting"/>
-              <label class="check-box" for="skills">Fundraising or accounting</label>
+              <input
+                type="checkbox"
+                id="fundraising"
+                name="skills"
+                value="Fundraising or accounting"
+              />
+              <label class="check-box" for="skills"
+                >Fundraising or accounting</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="photography" name="skills" value="Photography/videography"/>
-              <label class="check-box" for="skills">Photography/videography</label>
+              <input
+                type="checkbox"
+                id="photography"
+                name="skills"
+                value="Photography/videography"
+              />
+              <label class="check-box" for="skills"
+                >Photography/videography</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="legal" name="skills" value="Legal advocacy"/>
+              <input
+                type="checkbox"
+                id="legal"
+                name="skills"
+                value="Legal advocacy"
+              />
               <label class="check-box" for="skills">Legal advocacy</label>
             </div>
             <div class="check-container">
-              <input type="checkbox" id="media" name="skills" value="Media contacts"/>
+              <input
+                type="checkbox"
+                id="media"
+                name="skills"
+                value="Media contacts"
+              />
               <label class="check-box" for="skills">Media contacts</label>
             </div>
             <div class="check-container">
-              <input type="checkbox" id="political" name="skills" value="Local or state political contacts"/>
-              <label class="check-box" for="skills">Local or state political contacts</label>
+              <input
+                type="checkbox"
+                id="political"
+                name="skills"
+                value="Local or state political contacts"
+              />
+              <label class="check-box" for="skills"
+                >Local or state political contacts</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="lobby" name="skills" value="Effective lobbying of representatives"/>
-              <label class="check-box" for="skills">Effective lobbying of representatives</label>
+              <input
+                type="checkbox"
+                id="lobby"
+                name="skills"
+                value="Effective lobbying of representatives"
+              />
+              <label class="check-box" for="skills"
+                >Effective lobbying of representatives</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="speakers" name="skills" value="Speakers contacts for rallies/events"/>
-              <label class="check-box" for="skills">Speakers contacts for rallies/events</label>
+              <input
+                type="checkbox"
+                id="speakers"
+                name="skills"
+                value="Speakers contacts for rallies/events"
+              />
+              <label class="check-box" for="skills"
+                >Speakers contacts for rallies/events</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="recruitment" name="skills" value="Recruitment/New member outreach"/>
-              <label class="check-box" for="skills">Recruitment/New member outreach</label>
+              <input
+                type="checkbox"
+                id="recruitment"
+                name="skills"
+                value="Recruitment/New member outreach"
+              />
+              <label class="check-box" for="skills"
+                >Recruitment/New member outreach</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="orgs" name="skills" value="Learning about and connecting with other organizations"/>
-              <label class="check-box" for="skills">Learning about and connecting with other organizations</label>
+              <input
+                type="checkbox"
+                id="orgs"
+                name="skills"
+                value="Learning about and connecting with other organizations"
+              />
+              <label class="check-box" for="skills"
+                >Learning about and connecting with other organizations</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="spread-word" name="skills" value="Spreading the word"/>
+              <input
+                type="checkbox"
+                id="spread-word"
+                name="skills"
+                value="Spreading the word"
+              />
               <label class="check-box" for="skills">Spreading the word</label>
             </div>
             <div class="check-container">
-              <input type="checkbox" id="support-events" name="skills" value="Supporting events (food, transportation, etc.)"/>
-              <label class="check-box" for="skills">Supporting events (food, transportation, etc.)</label>
+              <input
+                type="checkbox"
+                id="support-events"
+                name="skills"
+                value="Supporting events (food, transportation, etc.)"
+              />
+              <label class="check-box" for="skills"
+                >Supporting events (food, transportation, etc.)</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="support-work" name="skills" value="Supporting the work (donating or storing supplies; printing materials; helping to defer costs, etc.)"/>
-              <label class="check-box" for="skills">Supporting the work (donating or storing supplies; printing materials; helping to defer costs, etc.)</label>
+              <input
+                type="checkbox"
+                id="support-work"
+                name="skills"
+                value="Supporting the work (donating or storing supplies; printing materials; helping to defer costs, etc.)"
+              />
+              <label class="check-box" for="skills"
+                >Supporting the work (donating or storing supplies; printing
+                materials; helping to defer costs, etc.)</label
+              >
             </div>
             <div class="check-container">
-              <input type="checkbox" id="other" name="skills" value="Other"/>
+              <input type="checkbox" id="other" name="skills" value="Other" />
               <label class="check-box" for="skills">Other</label>
+            </div>
+            <div id="optionsError" style="display: none; color: red">
+              Please select at least one option.
             </div>
           </div>
           <!-- End of skills section div -->
-          
+
           <div class="join-section">
-            <label for="hours">How many hours can you dedicate to the group work? (This is an estimate to help us plan - it is not a binding commitment!) *</label><br />
+            <label for="hours"
+              >How many hours can you dedicate to the group work? (This is an
+              estimate to help us plan - it is not a binding commitment!)
+              *</label
+            ><br />
             <div class="check-container">
-              <input type="radio" id="light" name="hours" value="Light (1-2 hours)"/>
+              <input
+                type="radio"
+                id="light"
+                name="hours"
+                value="Light (1-2 hours)"
+              />
               <label class="check-box" for="hours">Light (1-2 hours)</label>
             </div>
             <div class="check-container">
-              <input type="radio" id="sustaining" name="hours" value="Sustaining (3-4 hours)"/>
-              <label class="check-box" for="hours">Sustaining (2-4 hours)</label>
+              <input
+                type="radio"
+                id="sustaining"
+                name="hours"
+                required
+                value="Sustaining (3-4 hours)"
+              />
+              <label class="check-box" for="hours"
+                >Sustaining (2-4 hours)</label
+              >
             </div>
             <div class="check-container">
-              <input type="radio" id="leader" name="hours" value="Project Leader (5+ hours)"/>
+              <input
+                type="radio"
+                id="leader"
+                name="hours"
+                value="Project Leader (5+ hours)"
+              />
+              <label class="check-box" for="hours">Project Leader (5+ hours)</label>
+            </div>
+            <div class="check-container">
+              <input
+                type="radio"
+                id="unsure"
+                name="hours"
+                value="Unsure"
+              />
               <label class="check-box" for="hours">Unsure</label>
             </div>
           </div>
+          
+          </div>
 
-           <div class="join-section">
-            <label for="info">What else would you like us to know about you?</label><br />
-            <input type="text" id="info" name="info" placeholder="Your answer"/>
+          <div class="join-section">
+            <label for="info"
+              >What else would you like us to know about you?</label
+            ><br />
+            <textarea
+              type="text"
+              id="info"
+              name="info"
+              placeholder="Your answer"
+            ></textarea>
           </div>
 
           <div class="join-section">
             <label for="find">How did you find out about us?</label><br />
-            <input type="text" id="find" name="find" placeholder="Your answer"/>
+            <textarea
+              type="text"
+              id="find"
+              name="find"
+              placeholder="Your answer"
+            ></textarea>
           </div>
           <div class="join-submit-btn"></div>
         </form>
       </div>
       <!-- end of join-form div -->
-      
     </main>
     <footer>
       <span id="footer-content"></span>
