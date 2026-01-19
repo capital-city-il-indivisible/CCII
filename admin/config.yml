@@ -1,7 +1,7 @@
 backend:
-  name: github
+  name: git-gateway
   repo: valorieb/CCII
-  branch: main
+  branch: testing
   auth_scope: "repo"
 
 media_folder: "images/cms"     
