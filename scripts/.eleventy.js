@@ -3,6 +3,7 @@ module.exports = function () {
     dir: {
       input: ".",
       output: "_site",
+      data: "content",
     },
   };
 };

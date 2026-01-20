@@ -34,7 +34,7 @@
     />
 
     <link rel="stylesheet" href="styles/styles.css" />
-     <link rel="stylesheet" href="styles/styles-medium.css" />
+    <link rel="stylesheet" href="styles/styles-medium.css" />
     <link rel="stylesheet" href="styles/styles-large.css" />
     <link rel="stylesheet" href="styles/events.css" />
     <link rel="stylesheet" href="styles/events-large.css" />
@@ -62,7 +62,7 @@
         <h2>Upcoming Events</h2>
       </div>
 
-      <ul class="events">
+      <!-- <ul class="events">
         <li>
           <h2>No Kings 2 Rally</h2>
           <h3>What</h3>
@@ -79,24 +79,37 @@
           <h3>When</h3>
           <p>6:30 PM</p>
         </li>
-      </ul>
+      </ul> -->
+
+      <section id="events">
+        {% for event in events %}
+        <article class="event">
+          <h3>{{ event.title }}</h3>
+          <p><strong>{{ event.date }}</strong></p>
+          <p>📍 {{ event.location }}</p>
+          <p>🕒 {{ event.time }}</p>
+          <p>{{ event.description }}</p>
+        </article>
+        {% endfor %}
+      </section>
 
       <h2>More Community Events</h2>
       <div class="event-btn-container">
-      <a
-        class="event-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://springfieldserves.com/webcalendar/month.php"
-        >View Springfield Serves Calendar</a
-      > <br>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://bit.ly/ActionsSpi"
-        class="event-btn"
-        >View Actions for the Week</a
-      >
+        <a
+          class="event-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://springfieldserves.com/webcalendar/month.php"
+          >View Springfield Serves Calendar</a
+        >
+        <br />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://bit.ly/ActionsSpi"
+          class="event-btn"
+          >View Actions for the Week</a
+        >
       </div>
       <!-- <h2>Past Events</h2> -->
     </main>
