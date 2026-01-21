@@ -16,8 +16,8 @@ main {
 
 .event {
   border: 1px rgb(183, 182, 182) solid;
-  display: block;
-  padding: 0 auto;
+  display:flex;
+  padding: 0;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 200px;
@@ -27,7 +27,6 @@ main {
 .event h3{
   display: block;
   max-width:280px;
-  width:100%;
   background-color: #2b3a57;
   color:aliceblue;
   padding:20px;
