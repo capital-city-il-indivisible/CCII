@@ -1,6 +1,7 @@
 ---
 title: Events
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -85,13 +86,13 @@ title: Events
       </ul> -->
 
       <section id="events">
-        {% for event in events %}
+        {% for event in collections.events %}
         <article class="event">
-          <h3>{{ event.title }}</h3>
-          <p><strong>{{ event.date }}</strong></p>
-          <p>📍 {{ event.location }}</p>
-          <p>🕒 {{ event.time }}</p>
-          <p>{{ event.description }}</p>
+          <h3>{{ event.data.title }}</h3>
+          <p><strong>{{ event.data.date }}</strong></p>
+          <p>📍 {{ event.data.location }}</p>
+          <p>🕒 {{ event.data.time }}</p>
+          <p>{{ event.data.description }}</p>
         </article>
         {% endfor %}
       </section>
