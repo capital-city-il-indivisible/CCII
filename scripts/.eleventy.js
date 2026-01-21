@@ -1,9 +1,15 @@
-module.exports = function () {
+module.exports = function (eleventyConfig) {
+  // Copy entire styles folder
+  eleventyConfig.addPassthroughCopy("styles");
+
+  // Copy images folder
+  eleventyConfig.addPassthroughCopy("images");
+
   return {
     dir: {
-      input: ".",
+      input: "content",
       output: "_site",
-      data: "content",
+      includes: "../_includes",
     },
   };
 };

@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
+
+  {% for cssFile in ["about-large.css", "about.css", "attributions.css", "contact-large.css", "contact.css", "events-large.css", "events.css","join-large.css","join.css","resources.css","styles-large.css","styles.css","support-large.css","support.css" ] %}
+  <link rel="stylesheet" href="/styles/{{ cssFile }}">
+  {% endfor %}
 </head>
+
 <body>
-  {{ content | safe }}
+  <header>
+    <img src="/images/logo.png" alt="Logo" style="max-height: 60px;">
+    <h1>{{ title }}</h1>
+    <hr>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    <hr>
+    <p>&copy; 2026 Your Organization Name</p>
+  </footer>
 </body>
 </html>
