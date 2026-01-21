@@ -26,7 +26,8 @@ main {
 
 .event h3{
   display: block;
-  width:280px;
+  max-width:280px;
+  width:100%;
   background-color: #2b3a57;
   color:aliceblue;
   padding:20px;
