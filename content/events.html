@@ -86,17 +86,16 @@ title: Events
       </ul> -->
 
       <section id="events">
-  {% for event in collections.events %}
-    <article class="event">
-      <h3>{{ event.data.title }}</h3>
-      <p><strong>{{ event.data.date | readableDate }}</strong></p>
-      <p>📍 {{ event.data.location }}</p>
-      <p>🕒 {{ event.data.time }}</p>
-      <p>{{ event.data.description }}</p>
-    </article>
-  {% endfor %}
-</section>
-
+        {% for event in collections.events %}
+        <article class="event">
+          <h3>{{ event.data.title }}</h3>
+          <p><strong>{{ event.data.date | readableDate }}</strong></p>
+          <p>📍 {{ event.data.location }}</p>
+          <p>🕒 {{ event.data.time }}</p>
+          <p>{{ event.data.description }}</p>
+        </article>
+        {% endfor %}
+      </section>
 
       <h2>More Community Events</h2>
       <div class="event-btn-container">

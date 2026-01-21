@@ -5,7 +5,26 @@ main {
   max-width: 900px;
 }
 
-.events {
+#events {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.event {
+   border: 1px rgb(183, 182, 182) solid;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  min-height: 250px;
+
+}
+
+/* .events {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
@@ -22,7 +41,7 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 200px;
   min-height: 250px;
-}
+} */
 
 .event-btn-container{
     flex-direction: column;

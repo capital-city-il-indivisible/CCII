@@ -6,7 +6,7 @@
   width: 900px;
 }
 
-.events {
+#events {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -15,7 +15,7 @@
   align-items: stretch;
 }
 
-.events li {
+.event{
   margin: 10px;
   border: 1px rgb(183, 182, 182) solid;
   padding: 20px;
