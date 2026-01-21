@@ -15,7 +15,7 @@ main {
 }
 
 .event {
-   border: 1px rgb(183, 182, 182) solid;
+  border: 1px rgb(183, 182, 182) solid;
   padding: 0;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -26,7 +26,7 @@ main {
 
 .event h3{
   display: block;
-  width:100%;
+  width:300px;
   background-color: #2b3a57;
   color:aliceblue;
   padding:20px;
