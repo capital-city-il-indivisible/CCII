@@ -1,9 +1,8 @@
 module.exports = function (eleventyConfig) {
-  // Copy entire styles folder
+  
   eleventyConfig.addPassthroughCopy("styles");
-
-  // Copy images folder
   eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("index.html");
 
   return {
     dir: {
