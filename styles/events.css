@@ -24,6 +24,10 @@ main {
 
 }
 
+.event h3{
+  background-color: blueviolet;
+}
+
 /* .events {
   list-style-type: none;
   margin: 0 auto;
