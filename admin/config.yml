@@ -10,7 +10,7 @@ public_folder: "/images/cms"
 collections:
   - name: "events"
     label: "Events"
-    folder: "content/events"   # Markdown files for events
+    folder: "content/webmaster-events"   # Markdown files for events
     create: true
     slug: "{{slug}}"
     fields:
