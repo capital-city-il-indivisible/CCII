@@ -11,13 +11,13 @@ navUL.classList.add("menuLinks");
 navbar.appendChild(navUL);
 
 const navLinks = [
-  { text: "Home", href: "index.html" },
-  {text: "About", href: "about.html"},
-  { text: "Events", href: "events.html" },
-  { text: "Join", href: "join.html" },
-  {text: "Support CCII", href: "support.html"},
-  {text: "Contact Us", href: "contact.html"},
-  {text: "Resources", href: "resources.html"}
+  { text: "Home", href: "/index.html" },
+  {text: "About", href: "/about.html"},
+  { text: "Events", href: "/events.html" },
+  { text: "Join", href: "/join.html" },
+  {text: "Support CCII", href: "/support.html"},
+  {text: "Contact Us", href: "/contact.html"},
+  {text: "Resources", href: "/resources.html"}
 ];
 
 navLinks.forEach((link) => {
