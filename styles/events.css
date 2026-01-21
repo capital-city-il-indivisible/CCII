@@ -24,13 +24,17 @@ main {
 }
 
 .event h3{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   max-width:280px;
   background-color: #2b3a57;
   color:aliceblue;
   padding:20px;
   height: 82px;
   margin:0 auto;
+  text-align: center;
 }
 
 /* .events {
