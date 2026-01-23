@@ -188,7 +188,14 @@ main{
     border-radius: 20px;
     overflow: hidden;
     justify-self: flex-start;
-    height: 80px;
+    height: auto;
+    width: 300px;
+    flex-shrink: 0;
+
+  }
+
+  .logo-pic {
+    width: 300px;
   }
 
   .donate-btn {
