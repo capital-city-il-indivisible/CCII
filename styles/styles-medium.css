@@ -19,7 +19,7 @@ main{
   }
 
   .red-overlay{
-     position:absolute;
+    position:absolute;
     top: 74%;
     left: 77.2%;
     transform: translate(-50%, -50%);

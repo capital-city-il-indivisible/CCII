@@ -251,6 +251,7 @@ header {
   height: auto;
   margin: 0 auto;
   font-size: medium;
+  aspect-ratio: 1 / 1;
 }
 
 .overlay .extra-text {
