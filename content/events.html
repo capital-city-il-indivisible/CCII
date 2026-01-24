@@ -2,7 +2,7 @@
 title: Events
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -91,6 +91,14 @@ title: Events
           <h3>{{ event.data.title }}</h3>
           <p><strong>{{ event.data.date | readableDate }}</strong></p>
           <p>📍 {{ event.data.location }}</p>
+          {% if event.data.zoom_link %}
+          <p>
+            💻
+            <a href="{{ event.data.zoom_link }}" target="_blank"
+              >Join via Zoom</a
+            >
+          </p>
+          {% endif %}
           <p>🕒 {{ event.data.time }}</p>
           <p>{{ event.data.description }}</p>
         </article>
