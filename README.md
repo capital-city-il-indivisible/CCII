@@ -7,7 +7,7 @@ How to update the CCII website (Events)
 
 3.  Open the most recent event file
 
-    NOTE: Each event lives in its own file. You don’t need to touch any site code outside the webmastr-events directory.
+    NOTE: Each event lives in its own file. You don’t need to touch any site code outside the webmaster-events directory.
 
 4.  Click an event file
 
