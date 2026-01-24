@@ -1,8 +1,7 @@
 ---
 title: "No Kings 3"
-date_display: "Coming Soon!"
 location: "Watch this Space"
 time: ""
-description: ""
+description: "More information coming soon!"
 image: /images/cms/il-13-forum.jpg
 ---
