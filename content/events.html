@@ -86,16 +86,35 @@ title: Events
       </ul> -->
 
       <section id="events">
-        {% for event in collections.events %}
-        <article class="event">
-          <h3>{{ event.data.title }}</h3>
-          <p><strong>{{ event.data.date | readableDate }}</strong></p>
-          <p>📍 {{ event.data.location }}</p>
-          <p>🕒 {{ event.data.time }}</p>
-          <p>{{ event.data.description }}</p>
-        </article>
-        {% endfor %}
-      </section>
+  {% for event in collections.events %}
+  <article class="event">
+    <h3>{{ event.data.title }}</h3>
+    
+    {% if event.data.date_display %}
+      {% if event.data.date_display matches /^\d{4}-\d{2}-\d{2}$/ %}
+        <!-- If it's an ISO date string, format it -->
+        <p><strong>{{ event.data.date_display | date("MMMM d, yyyy") }}</strong></p>
+      {% else %}
+        <!-- Otherwise just show the text (e.g., "Coming Soon!") -->
+        <p><strong>{{ event.data.date_display }}</strong></p>
+      {% endif %}
+    {% endif %}
+    
+    {% if event.data.location %}
+      <p>📍 {{ event.data.location }}</p>
+    {% endif %}
+    
+    {% if event.data.time %}
+      <p>🕒 {{ event.data.time }}</p>
+    {% endif %}
+    
+    {% if event.data.description %}
+      <p>{{ event.data.description }}</p>
+    {% endif %}
+  </article>
+  {% endfor %}
+</section>
+
 
       <h2>More Community Events</h2>
       <div class="event-btn-container">
