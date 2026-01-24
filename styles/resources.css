@@ -6,11 +6,11 @@ main {
    max-width: 900px;
 }
 
-ul a{
+ul.resources a{
     color:rgb(227, 227, 75);
 }
 
-li a:visited{
+ul.resources a:visited{
     color:aqua
 }
 

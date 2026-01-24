@@ -1,4 +1,7 @@
 @media (min-width: 900px) {
+  p {
+    font-size: large;
+  }
   .about {
     display: flex;
     align-items: center;
@@ -20,6 +23,13 @@
   .believe img {
     padding-left: 10px;
   }
+  .value {
+    display:flex;
+  }
+  .value p {
+    margin: 10px;
+  }
+
 
 
   

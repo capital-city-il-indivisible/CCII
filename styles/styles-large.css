@@ -1,14 +1,28 @@
-@media (min-width: 900px) {
-  
+@media (min-width: 900px) and (min-height:625px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main{
+  flex:1;
+  display:flex;
+  flex-direction: column;
+}
   nav {
     background-color: black;
     color: aliceblue;
     display: flex;
     align-items: center;
-    height: 50px;
+    justify-items: center;
+    height: 70px;
     padding: 0 20px;
     box-sizing: border-box;
+    font-size:x-large;
   }
+
+  
 
   ul.menuLinks.open {
     display: flex !important;
@@ -39,6 +53,9 @@
     flex: 1;
     text-align: center;
     justify-self: center;
+    align-items: center;
+    justify-content: center;
+    display:flex;
   }
 
   nav a {
@@ -53,38 +70,69 @@
     justify-content: space-between;
   }
 
-  .hero-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: transparent;
+  .hero-wrapper {
+    position: relative;
+    width:100%;
   }
 
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+  footer {
+    position: relative;
+    z-index: 0;
+}
+
+
+  .hero-container img.hero {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit:contain;
+    object-position:center;
+  }
+
+  .hero-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    position:relative;
+    
+  }
+
+ 
   .hero {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
+    max-width: 1300px;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 200px);
+    object-fit: none;
     object-position: center;
     display: block;
     margin: 0 auto;
     position: relative;
+    
   }
 
   .overlay {
     position: absolute;
-    top: 50%;
-    left: 32%;
+    top: 55%;
+    left: 22%;
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
     border-radius: 50%;
     text-align: center;
     z-index: 1;
-    width: 240px;
+    width: 280px;
     aspect-ratio: 1 / 1;
+    
   }
 
     .overlay h1{
@@ -93,7 +141,24 @@
 
     .overlay .extra-text {
     display: block;
+  }
 
+  .overlay p{
+    font-size: large;
+  }
+
+  .red-overlay{
+    position:absolute;
+    top: 74%;
+    left: 77.2%;
+    transform: translate(-50%, -50%);
+    color:rgb(255, 255, 255);
+    z-index: 1;
+    width: 200px;
+    height: auto;
+    display:block;
+    font-size: x-large;
+    font-weight: bolder;
   }
 
   .join-btn {
@@ -102,7 +167,7 @@
     height: 100px;
     padding: 10px;
     border-radius: 50%;
-    top: 73%;
+    top: 63%;
     right: 60%;
     font-size: 30px;
     background-color: #479dff;
@@ -119,16 +184,24 @@
  
 
   .logo {
-    margin: 20px;
-    border-radius: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
     justify-self: flex-start;
-    height: 50px;
+    height: auto;
+    width: 300px;
+    flex-shrink: 0;
+
+  }
+
+  .logo-pic {
+    width: 300px;
   }
 
   .donate-btn {
     font-size: 40px;
     width: 200px;
-    height: 100px;
+    height: 143px;
     padding: 10px;
     margin-left: auto;
   }

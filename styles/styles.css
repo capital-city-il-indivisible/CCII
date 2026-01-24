@@ -4,7 +4,7 @@ html {
   font-style: normal;
   background-color: #6ea1c4;
   overflow-x: hidden;
-
+  width: 100%;
   margin: 0;
 }
 
@@ -28,11 +28,17 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+
+.main-footer-wrapper{
+  flex:1;
+  display:flex;
+  flex-direction: column;
 }
 
 main {
   max-width: 1300px;
-  height: 70vh;
   margin: 0 auto;
   text-align: center;
   background-color: transparent;
@@ -138,14 +144,15 @@ header {
 .logo {
   margin: 5px;
   border-radius: 5px;
-  height: 25px;
+  height: auto;
+  width: 70px;
 }
 
 .donate-btn {
   background-color: #db3838;
   color: white;
-  font-size: 20px;
-  width: 85px;
+  font-size: 18px;
+  width: 80px;
   height: 100%;
   padding: 10px;
   text-align: center;
@@ -167,7 +174,7 @@ header {
   margin-right: 30px;
 }
 
-.search-bar {
+/* .search-bar {
   width: 100%;
   padding: 8px 10px 8px 10px;
   border-radius: 20px;
@@ -181,7 +188,7 @@ header {
   width: 20px;
   height: 20px;
   cursor: pointer;
-}
+} */
 
 #small-socials {
   margin-left: auto;
@@ -214,53 +221,54 @@ header {
   transform: scale(1.05);
 }
 
+.hero-wrapper{
+   position: relative;
+}
 .hero-container {
   background-color: transparent;
-  position: relative;
-  max-width: 1300px;
 }
 
 .hero {
+  max-width: 414px;
   width: auto;
-  height: 70vh;
+  height: 300px;
   object-fit: cover;
   object-position: center;
   display: block;
   margin: 0 auto;
-  position: relative;
 }
 
 .overlay h1 {
-  font-size: large;
+  font-size: x-large;
 }
 
 .overlay {
-  position: absolute;
-  top: 45%;
-  left: 42%;
-  transform: translate(-50%, -50%);
+  border-radius: 0;
   background-color: white;
   padding: 20px;
-  border-radius: 50%;
   text-align: center;
-  z-index: 1;
-  width: 120px;
-  aspect-ratio: 1 / 1;
-  font-size: small;
+  width: 174px;
+  height: auto;
+  margin: 0 auto;
+  font-size: medium;
 }
 
 .overlay .extra-text {
   display: none;
 }
 
+.red-overlay{
+    display:none;
+  }
+
 .join-btn {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   padding: 10px;
   border-radius: 50%;
-  top: 65%;
-  left: 52%;
+  top: 75%;
+  left: 50%;
   font-size: 16px;
   background-color: #479dff;
   color: rgb(41, 41, 41);

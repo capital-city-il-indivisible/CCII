@@ -1,0 +1,126 @@
+---
+title: Events
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Capital City Illinois Indivisible | Events"
+    />
+    <meta name="author" content="Valorie Broderick" />
+
+    <meta
+      property="og:title"
+      content="Capital City Illinois Indivisible | Events"
+    />
+    <meta
+      property="og:description"
+      content="Events | Capital City Illinois Indivisible"
+    />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="capitalcityillinoisindivisible.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <title>Events</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/styles-medium.css" />
+    <link rel="stylesheet" href="/styles/styles-large.css" />
+    <link rel="stylesheet" href="/styles/events.css" />
+    <link rel="stylesheet" href="/styles/events-large.css" />
+
+    <script src="/scripts/nav.js" defer></script>
+    <script src="/scripts/date.js" defer></script>
+    <script src="/scripts/header.js" defer></script>
+  </head>
+  <body>
+    <header id="header">
+      <span id="logo"></span>
+      <span id="small-socials"></span>
+      <span id="small-donate"></span>
+      <div class="header-stuff">
+        <span id="socials"></span>
+        <!-- <span id="search"></span> -->
+        <div id="big-donate-button"></div>
+      </div>
+    </header>
+    <nav id="navbar"></nav>
+    <div class="hamnav"></div>
+    <main>
+      <div class="heading1">
+        <h1>Events</h1>
+        <h2>Upcoming Events</h2>
+      </div>
+
+      <!-- <ul class="events">
+        <li>
+          <h2>No Kings 2 Rally</h2>
+          <h3>What</h3>
+          <h3>Where</h3>
+          <h3>When</h3>
+          <p>October 18</p>
+          <p>Noon - 2 PM</p>
+        </li>
+        <li>
+          <h2>CCII Meeting/Vote Riders Letter Writing </h2>
+          <h3>What</h3>
+          <h3>Where</h3>
+          <p>Lincoln Library Multi-Purpose Room</p>
+          <h3>When</h3>
+          <p>6:30 PM</p>
+        </li>
+      </ul> -->
+
+      <section id="events">
+        {% for event in collections.events %}
+        <article class="event">
+          <h3>{{ event.data.title }}</h3>
+          <p><strong>{{ event.data.date | readableDate }}</strong></p>
+          <p>📍 {{ event.data.location }}</p>
+          <p>🕒 {{ event.data.time }}</p>
+          <p>{{ event.data.description }}</p>
+        </article>
+        {% endfor %}
+      </section>
+
+      <h2>More Community Events</h2>
+      <div class="event-btn-container">
+        <a
+          class="event-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://springfieldserves.com/webcalendar/month.php"
+          >View Springfield Serves Calendar</a
+        >
+        <br />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://bit.ly/ActionsSpi"
+          class="event-btn"
+          >View Actions for the Week</a
+        >
+      </div>
+      <!-- <h2>Past Events</h2> -->
+    </main>
+    <footer>
+      <span id="footer-content"></span>
+    </footer>
+  </body>
+</html>
+
+<!-- netlify CMS for webmasters to do normal updates -->

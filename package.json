@@ -1,0 +1,10 @@
+{
+  "name": "ccii-site",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "scripts": {
+    "build": "eleventy"
+  }
+}
