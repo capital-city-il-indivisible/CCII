@@ -1,0 +1,151 @@
+main {
+  height: auto;
+  color: aliceblue;
+  max-width: 900px;
+  width: 100%;
+  padding: 10px;
+  font-size: larger;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input{
+  max-width:210px;
+  margin-top: 3px;
+}
+
+textarea{
+  max-width:210px;
+  height:200px;
+  display:block;
+  margin: 0 auto;
+}
+
+label {
+  padding: 5px;
+  margin: 0 auto;
+  display: block;
+  font-weight: 900;
+}
+
+p {
+  padding: 5px;
+}
+
+.check-box {
+  font-weight: 400;
+}
+
+.check-container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px;
+}
+
+.check-container input {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.check-container label {
+  margin: 0;
+  padding: 0;
+}
+
+.indivisibles {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.orange-text {
+  color: rgb(169, 96, 13);
+}
+
+.join-form {
+  background-color: rgba(136, 161, 182, 0.683);
+  border-radius: 10px;
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid rgb(190, 188, 188);
+  padding: 5px;
+}
+
+.join-section,
+.top-join-section {
+  background-color: aliceblue;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  text-align: left;
+}
+
+.top-join-section {
+  border-top: 10px solid rgb(96, 21, 167);
+}
+
+.join {
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: x-large;
+  border-radius: 20px;
+  color: whitesmoke;
+  background-color: #2b3a57;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+  transform: scale(1);
+}
+
+.join:hover {
+  color: white;
+  background-color: #3f5174;
+  transform: scale(1.1);
+}
+/* validation */
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  opacity: 0;
+  transition: opacity 0.3s;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+.error.show {
+  opacity: 1;
+  max-height: 50px;
+  margin-top: 2px;
+}
+.invalid {
+  border-color: red;
+}
+.valid {
+  border-color: green;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #666;
+}

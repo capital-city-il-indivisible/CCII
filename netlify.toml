@@ -1,0 +1,6 @@
+[dev]
+  publish = "_site"
+
+[build]
+  command = "npx eleventy"
+  publish = "_site"

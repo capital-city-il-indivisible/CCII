@@ -1,0 +1,95 @@
+@media (min-width: 399.9px) {
+
+main{
+  flex:1;
+  display:flex;
+  flex-direction: column;
+}
+
+.logo {
+  max-width:100%;
+  width: 200px;
+  height:auto;
+  border-radius: 15px;
+}
+/* testing deploy1 */
+
+     .hero-container {
+  background-color: transparent;
+  }
+
+  .red-overlay{
+    position:absolute;
+    top: 74%;
+    left: 77.2%;
+    transform: translate(-50%, -50%);
+    color:rgb(255, 255, 255);
+    z-index: 1;
+    width: 200px;
+    height: auto;
+    display:block;
+    font-size: large;
+    font-weight: bolder;
+  }
+
+  .hero {
+    max-width: 1300px;
+    width: auto;
+    height: 70vh;
+    min-height: 350px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
+
+   .hero-wrapper {
+    position: relative;
+    width:100%;
+  }
+
+  .overlay h1{
+    font-size: large;
+  }
+
+    .overlay {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 1;
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    font-size:medium;
+  }
+
+   .overlay .extra-text {
+    display: none;
+  }
+
+  .join-btn {
+    top: 88%;
+    left: 53%;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 16px;
+    background-color: #479dff;
+    color: rgb(41, 41, 41);
+    aspect-ratio: 1 / 1;
+    border:none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+    animation: slowGlow 3s ease-in-out infinite alternate;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+  }
+    
+}

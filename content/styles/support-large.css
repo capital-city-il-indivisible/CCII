@@ -1,0 +1,8 @@
+@media (min-width: 900px){
+
+    .support-list{
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+}

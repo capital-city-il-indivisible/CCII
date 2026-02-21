@@ -1,0 +1,11 @@
+@media (min-width: 565px){
+
+    textarea {
+  width: 500px;
+  
+}
+input{
+  width: 500px;
+}
+
+}

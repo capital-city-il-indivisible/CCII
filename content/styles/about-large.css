@@ -1,0 +1,36 @@
+@media (min-width: 900px) {
+  p {
+    font-size: large;
+  }
+  .about {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+  }
+  .about img {
+    padding-right: 10px;
+  }
+
+  .believe {
+    display: flex;
+    align-items: center;
+  }
+
+  .believe p {
+    padding-left: 10px;
+  }
+
+  .believe img {
+    padding-left: 10px;
+  }
+  .value {
+    display:flex;
+  }
+  .value p {
+    margin: 10px;
+  }
+
+
+
+  
+}
