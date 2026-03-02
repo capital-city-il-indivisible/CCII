@@ -1,6 +1,11 @@
 ## How to update the CCII website
 
-How to update the CCII website (Events)
+How to update the CCII website in Github(Events)
+
+IMPORTANT:
+FIRST MAKE SURE YOU ARE ON THE WEBMASTERS BRANCH (see video)
+
+Once you are on the webmasters branch:
 
 1.  Go to the content folder
 2.  Go to the webmaster-events directory
@@ -35,8 +40,30 @@ How to update the CCII website (Events)
         location: Springfield Public Library
 
 12. Click Commit changes
+13. If the changes are successful, create a pull request(see linked video)
 
 The website will update automatically within a minute or two.
 
 For extra help watch a tutorial here -->
-https://youtu.be/cAVvlo4nIec?si=a9pLbrpmx2wiPA2c
+https://youtu.be/UWlykh9Byzw
+
+----------------------NOTES:------------------ 
+Do not try to change the existing events template. ONLY change text after colons. 
+
+--Keep dates and times in the format you find them (eg don't change 7:00 PM to "seven-ish", "7pm" or other text. The code is looking for a time in a specific format). 
+
+--You can delete irrelevant fields (eg if there is no image feel free to delete the image field for the event).
+
+-- You cannot add new fields or it will cause the site to crash (eg if you want to highlight the event speakers you cannot add "Speakers:" to the template. The code itself would need to be updated for this to work).
+
+----------------FIELDS TEMPLATE:--------------------
+
+Here are the fields you can currently add to any event.
+
+Title: any text (ex: Vigil)
+Date: YYYY-MM-DD (ex: 2026-03-24)
+Location:any text (ex: Lincoln statue)
+Zoom Link: any text (ex: just paste a zoom link here)
+Time: 0:00 PM/AM (ex: 9:00 AM)
+Description: any text (ex: Vigil for world peace)
+Image: image url (ex:../assets/images/event-img.png)
