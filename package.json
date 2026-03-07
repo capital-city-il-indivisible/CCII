@@ -2,9 +2,15 @@
   "name": "ccii-site",
   "private": true,
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "rimraf": "^5.0.0"
   },
   "scripts": {
-    "build": "eleventy"
+    "clean": "rimraf _site",
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "watch": "eleventy --watch",
+    "dev": "npm run start",
+    "netlify-dev": "npx eleventy && netlify dev --dir=_site"
   }
 }

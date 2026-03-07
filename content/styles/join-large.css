@@ -1,0 +1,21 @@
+@media (min-width: 900px) {
+  .indivisibles {
+    width: 100%;
+    max-width: 900px;
+    margin: 10px;
+  }
+  .join-form {
+    max-width: 660px;
+    width: 100%;
+  }
+  .join-section,
+  .top-join-section {
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 550px;
+  }
+  textarea {
+    max-width: 500px;
+    height: 200px;
+  }
+}
