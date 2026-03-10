@@ -13,7 +13,7 @@ navbar.appendChild(navUL);
 const navLinks = [
   { text: "Home", href: "/index/" },
   { text: "About", href: "/about/" },
-  { text: "Events", href: "/events/l" },
+  { text: "Events", href: "/events/" },
   { text: "Join", href: "/join/" },
   { text: "Support CCII", href: "/support/" },
   { text: "Contact Us", href: "/contact/" },
