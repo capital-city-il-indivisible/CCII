@@ -4,6 +4,15 @@ main {
   background-color: aliceblue;
   max-width: 900px;
 }
+
+.special-announcement {
+  background-color: rgb(255, 228, 107);
+  padding: 10px;
+  margin:10px;
+  border-radius: 10px;
+  border: solid 2px orange;
+}
+
 .support-img {
   border-radius: 10px;
   max-width: 500px;
