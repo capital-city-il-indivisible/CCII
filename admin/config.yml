@@ -4,8 +4,8 @@ backend:
   branch: testing
   auth_scope: "repo"
 
-media_folder: "images/cms"     
-public_folder: "/images/cms" 
+media_folder: "images/cms"
+public_folder: "/images/cms"
 
 collections:
   - name: "events"
@@ -17,10 +17,21 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "string" }
       - { label: "Location", name: "location", widget: "string" }
-      - { label: "Zoom Link", name: "zoom_link", widget: "string", required: false }
+      - {
+          label: "Zoom Link",
+          name: "zoom_link",
+          widget: "url",
+          required: false,
+        }
       - { label: "Time", name: "time", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - {
+          label: "Signup Link",
+          name: "signup_link",
+          widget: "url",
+          required: false,
+        }
 
   - name: "news"
     label: "News / Blog"
