@@ -90,12 +90,20 @@ title: Events
         <article class="event">
           <h3>{{ event.data.title }}</h3>
           <p><strong>{{ event.data.date | readableDate }}</strong></p>
+          {% if event.data.signup_link %}
+          <p>
+            📅
+            <a href="{{ event.data.signup_link.url }}" target="_blank"
+              >{{ event.data.signup_link.text | default: "Sign up" }}</a
+            >
+          </p>
+          {% endif %}
           <p>📍 {{ event.data.location }}</p>
           {% if event.data.zoom_link %}
           <p>
             💻
-            <a href="{{ event.data.zoom_link }}" target="_blank"
-              >Join via Zoom</a
+            <a href="{{ event.data.zoom_link.url }}" target="_blank"
+              >{{ event.data.zoom_link.text | default: "Join via Zoom" }}</a
             >
           </p>
           {% endif %}

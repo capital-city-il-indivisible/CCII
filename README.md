@@ -47,10 +47,10 @@ The website will update automatically within a minute or two.
 For extra help watch a tutorial here -->
 https://youtu.be/UWlykh9Byzw
 
-----------------------NOTES:------------------ 
-Do not try to change the existing events template. ONLY change text after colons. 
+----------------------NOTES:------------------
+Do not try to change the existing events template. ONLY change text after colons.
 
---Keep dates and times in the format you find them (eg don't change 7:00 PM to "seven-ish", "7pm" or other text. The code is looking for a time in a specific format). 
+--Keep dates in the format you find them. The code is looking for a specific format. DATES DO NOT HAVE QUOTATION MARKS.
 
 --You can delete irrelevant fields (eg if there is no image feel free to delete the image field for the event).
 
@@ -60,10 +60,10 @@ Do not try to change the existing events template. ONLY change text after colons
 
 Here are the fields you can currently add to any event.
 
-Title: any text (ex: Vigil)
+Title: "any text (ex: Vigil)"
 Date: YYYY-MM-DD (ex: 2026-03-24)
-Location:any text (ex: Lincoln statue)
-Zoom Link: any text (ex: just paste a zoom link here)
-Time: 0:00 PM/AM (ex: 9:00 AM)
-Description: any text (ex: Vigil for world peace)
+Location:"any text (ex: Lincoln statue)"
+Zoom Link: "any text (ex: just paste a zoom link here)"
+Time: "any text"
+Description: "any text (ex: Vigil for world peace)"
 Image: image url (ex:../assets/images/event-img.png)
