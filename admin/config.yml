@@ -14,14 +14,17 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Date", name: "date", widget: "date" required: false }
       - { label: "Location", name: "location", widget: "string" }
       - {
           label: "Zoom Link",
           name: "zoom_link",
-          widget: "url",
+          widget: "object",
           required: false,
+          fields:
+            - { label: "Link URL", name: "url", widget: "url", required: true },
+            - { label: "Link Text", name: "text", widget: "string", required: false, default: "Join Zoom Meeting" }
         }
       - { label: "Time", name: "time", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
@@ -29,8 +32,11 @@ collections:
       - {
           label: "Signup Link",
           name: "signup_link",
-          widget: "url",
+          widget: "object",
           required: false,
+          fields:
+            - { label: "Link URL", name: "url", widget: "url", required: true },
+            - { label: "Link Text", name: "text", widget: "string", required: false, default: "Sign up!" }
         }
 
   - name: "news"
