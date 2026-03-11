@@ -60,6 +60,8 @@ Do not try to change the existing events template. ONLY change text after colons
 
 Here are the fields you can currently add to any event.
 
+---
+
 Title: "any text (ex: Vigil)"
 Date: YYYY-MM-DD (ex: 2026-03-24)
 Location:"any text (ex: Lincoln statue)"
@@ -67,3 +69,5 @@ Zoom Link: "any text (ex: just paste a zoom link here)"
 Time: "any text"
 Description: "any text (ex: Vigil for world peace)"
 Image: image url (ex:../assets/images/event-img.png)
+
+---
