@@ -1,6 +1,6 @@
 ---
 title: "De-Escalation Training for rally protests/ushers"
-date: 
+date: ""
 location: Lincoln Library
 time: "Multiple dates and times-see sign up sheet"
 description: "To sign up: https://www.signupgenius.com/go/
