@@ -5,5 +5,4 @@ Location: Illinois State Capital Lincoln Statue
 Zoom Link: 
 Time: 11:30 AM
 Description: Pre gathering at 11:30, rally from Noon to 2 PM, March from 2:10 to 2:30.  Want to help? See Volunteer sign up sheet
-Image: https://www.signupgenius.com/go/10C0E4DA9AC2CA3FDC07-62653632-nokings#/
 ---
