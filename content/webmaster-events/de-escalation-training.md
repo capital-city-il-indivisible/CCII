@@ -1,8 +1,8 @@
 ---
-title: "De-Escalation Training"
-date: 2026-02-07
-location: "Capati Dental"
-time: "12:00 PM - 2:00 PM"
+title: "De-Escalation Training for rally protests/ushers"
+date: 
+location: Lincoln Library
+time: "Multiple dates and times-see sign up sheet"
 description: "De-escalation training for rally/protest ushers."
 image: /images/cms/de-escalation.jpg
 ---
