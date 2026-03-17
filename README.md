@@ -65,9 +65,14 @@ Here are the fields you can currently add to any event.
 Title: "any text (ex: Vigil)"
 Date: YYYY-MM-DD (ex: 2026-03-24)
 Location:"any text (ex: Lincoln statue)"
-Zoom Link: "any text (ex: just paste a zoom link here)"
+Zoom Link: 
+    url: "any text (just paste a signup link url here)"
+    text: "any text (ex: "Zoom link"or "Join Zoom meeting")" <--if left blank, defaults to "Join Zoom meeting"
 Time: "any text"
 Description: "any text (ex: Vigil for world peace)"
 Image: image url (ex:../assets/images/event-img.png)
+signup_link:
+    url: "any text (just paste a signup link url here)"
+    text: "any text (ex: "Sign up"or "Volunteer")" <--if left blank, defaults to "Sign up"
 
 ---
