@@ -1,9 +1,9 @@
 ---
 title: March CCII Meeting - Hybrid format
-date: 2026-03-24
+display_date: "03-24-2026"
 location: Lincoln Library Multi Purpose Room
-Zoom Link: "https://us06web.zoom.us/j/83397227277?pwd=mCgHY5ZaSDSemIHLneFzPUQ9tNRxjF.1"
+zoom_link:
+  url: "https://us06web.zoom.us/j/83397227277?pwd=mCgHY5ZaSDSemIHLneFzPUQ9tNRxjF.1"
+  text: "Join Zoom meeting"
 time: 6:30 PM
-description: 
-image: /images/cms/de-escalation.jpg
 ---
