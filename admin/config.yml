@@ -14,8 +14,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Highlighted Event", name: "highlighted", widget: "boolean", default: false, required: false }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Date", name: "date", widget: "date" required: false }
+      - { label: "Display Date", name: "display_date", widget: "string" required: false }
       - { label: "Location", name: "location", widget: "string" }
       - {
           label: "Zoom Link",

@@ -89,7 +89,7 @@ title: Events
         {% for event in collections.events %}
         <article class="event">
           <h3>{{ event.data.title }}</h3>
-          <p><strong>{{ event.data.date | readableDate }}</strong></p>
+          <p><strong>{{ event.data.display_date }}</strong></p>
           {% if event.data.signup_link %}
           <p>
             📅

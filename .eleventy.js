@@ -12,11 +12,6 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("content/webmaster-events/*.md");
   });
 
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    if (!dateObj) return "";
-    return DateTime.fromJSDate(dateObj).toFormat("MMMM d, yyyy");
-  });
-
   return {
     dir: {
       input: "content",
