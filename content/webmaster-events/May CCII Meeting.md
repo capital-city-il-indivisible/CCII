@@ -1,6 +1,6 @@
 ---
 title: May CCII Meeting - Hybrid format
-display_date: "04-26-2026"
+display_date: "05-26-2026"
 location: Lincoln Library Multi Purpose Room Room
 zoom_link:
   url: "https://us06web.zoom.us/j/83397227277?pwd=mCgHY5ZaSDSemIHLneFzPUQ9tNRxjF.1"
