@@ -42,7 +42,14 @@ main {
   margin: 0 auto;
   text-align: center;
   background-color: transparent;
-  /* padding: 20px; */
+  display:flex;
+  gap: 20px;
+}
+
+.featured-event{
+  width: 50px;
+  height: 50px;
+  background-color: #ff40c9;
 }
 
 nav {
@@ -174,6 +181,7 @@ header {
   margin-right: 30px;
 }
 
+
 /* .search-bar {
   width: 100%;
   padding: 8px 10px 8px 10px;
@@ -223,6 +231,7 @@ header {
 
 .hero-wrapper{
    position: relative;
+   width: 80%;
 }
 .hero-container {
   background-color: transparent;
