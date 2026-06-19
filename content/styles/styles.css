@@ -301,8 +301,13 @@ header {
 
 .days-left {
   font-size: xx-large;
-  
+  }
+.countdown-text{
+  font-size: medium;
 }
+  .countdwn-sub-txt{
+    font-size: medium;
+  }
 
 @keyframes slowGlow {
   0% {
