@@ -16,7 +16,7 @@ text.innerHTML = "Days to <br> Midterm Election: ";
 text.setAttribute("class","countdown-text");
 
 const textSub = document.createElement("p");
-textSub.innerHTML="Nov 6, 2026";
+textSub.innerHTML="Nov 3, 2026";
 textSub.setAttribute("class", "countdwn-sub-txt");
 
 timer.appendChild(text);
