@@ -42,8 +42,15 @@ main {
   margin: 0 auto;
   text-align: center;
   background-color: transparent;
-  /* padding: 20px; */
+  display:flex;
+  gap: 20px;
 }
+
+/* .featured-event{
+  width: 50px;
+  height: 50px;
+  background-color: #ff40c9;
+} */
 
 nav {
   background-color: black;
@@ -174,6 +181,7 @@ header {
   margin-right: 30px;
 }
 
+
 /* .search-bar {
   width: 100%;
   padding: 8px 10px 8px 10px;
@@ -223,6 +231,7 @@ header {
 
 .hero-wrapper{
    position: relative;
+   width: 80%;
 }
 .hero-container {
   background-color: transparent;
@@ -290,6 +299,16 @@ header {
   border: #7c9eed 2px solid;
 }
 
+.days-left {
+  font-size: xx-large;
+  }
+.countdown-text{
+  font-size: medium;
+}
+  .countdwn-sub-txt{
+    font-size: medium;
+  }
+
 @keyframes slowGlow {
   0% {
     box-shadow: 0 4px 10px rgba(0, 150, 255, 0.5);
@@ -300,4 +319,7 @@ header {
   100% {
     box-shadow: 0 4px 10px rgba(0, 150, 255, 0.5);
   }
+
+
+
 }
