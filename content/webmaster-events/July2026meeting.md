@@ -1,6 +1,6 @@
 ---
-title: July CCII Meeting - Hybrid format
-display_date: "07-28-2026"
+title: August CCII Meeting - Hybrid format
+display_date: "08-25-2026"
 location: Lincoln Library Multi Purpose Room 
 zoom_link:
   url: "https://us06web.zoom.us/j/83397227277?pwd=mCgHY5ZaSDSemIHLneFzPUQ9tNRxjF.1"
